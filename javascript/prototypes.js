@@ -5,11 +5,14 @@ class Dog {
     }
 
     speak() {
-        console.log(`Woof! My name is ${name}`)
+        console.log(`Woof! My name is ${this.name}`)
     }
 
-    Dog.walk = function(location, distance) {
-        return this.location;
+    function Walk(location, distance) {
+        this.distance = distance;
+        this.location = location;
+
+        console.log(`${this.name} walked for ${this.distance} at ${this.location}`)
     }
 
     displayWalks() {
