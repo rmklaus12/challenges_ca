@@ -11,11 +11,17 @@ class Dog {
     function Walk(location, distance) {
         this.distance = distance;
         this.location = location;
+    }
 
-        console.log(`${this.name} walked for ${this.distance} at ${this.location}`)
+    Dog.prototype.Walk = function() {
+        console.log(`${this.name} walked for ${this.distance} km at ${this.location}`)
     }
 
     displayWalks() {
-        console.log(this.location, this.displayWalks)
+        console.log(this.name, this.location, this.displayWalks)
+    }
+
+    totalDistance() {
+        console.log(`${this.name} has walked ${this.distance}`)
     }
 }
